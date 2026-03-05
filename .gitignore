@@ -1,0 +1,14 @@
+# Simulation binaries
+sim/alu_sim
+
+# VCD waveform files (can be large)
+*.vcd
+
+# Yosys log artifacts
+*.log
+
+# PDK (never upload this - it's huge)
+pdk/
+
+# Docker artifacts
+*.tar.gz
