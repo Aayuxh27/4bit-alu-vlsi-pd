@@ -1,0 +1,10 @@
+set_input_delay 0 [all_inputs]
+set_output_delay 0 [all_outputs]
+set_load 0.1 [all_outputs]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_2 [all_inputs]
+
+create_clock -name clk -period 10 [get_ports clk]
+set_input_delay 2 -clock clk [all_inputs]
+set_output_delay 2 -clock clk [all_outputs]
+set_load 0.1 [all_outputs]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_2 [all_inputs]
