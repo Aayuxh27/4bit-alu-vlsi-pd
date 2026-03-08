@@ -1,5 +1,9 @@
+# Loads the verilog file into yosys internal database
+# If we  have multiple modules it just reads them but does not link them
 read_verilog rtl/alu4bit.v
 
+# -top alu4bit tells Yosys which module is the top of your design hierarchy. Everything not reachable from this top module gets discarded.
+# - check verifies if every module instantiated actually exists in the database
 hierarchy -check -top alu4bit
 
 synth -top alu4bit
